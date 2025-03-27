@@ -8,7 +8,7 @@ package empleado;
  *
  * @author natal
  */
-abstract  class Empleado {
+public class Empleado {
 protected String nombre;
 protected String Departamento;
 protected String Cargo;
@@ -36,5 +36,5 @@ protected String Cargo;
     public void setCargo(String Cargoem) {
         this.Cargo = Cargoem;
     }
-    abstract void CalcularQuincena ();   
+    
 }
