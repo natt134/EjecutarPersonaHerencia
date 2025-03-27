@@ -11,13 +11,12 @@ public class EjecutarEmpleado {
      */
     public static void main(String[] args) {
     Scanner Leer=new Scanner (System.in);
-    String nombre, Departamento,Cargo,son;
+    String nombre, Departamento,Cargo,continuar;
     double SueldoMensual, preciodeltrabajo,precioauto,salariominimo;
     int trabajosrealizados,autosvendidos;
         System.out.println("\n CALCULA EL SUELDO QUINCENAL DE LOS EMPLEADOS\n");
-        Empleado []Empleado=new Empleado [3];
-        for (int i = 0; i < Empleado.length; i++) {
-            System.out.println("<<<<    Datos Ingresados de la persona "+(i+1));
+    do {            
+       System.out.println("<<<<    Datos Ingresados de la persona ");
         System.out.println("<<<<    Tipos de Empleados    >>>>");  
             System.out.println("<<<< ------------- ---------- >>>>"); 
             System.out.println("        1. Administrativo         ");
@@ -91,8 +90,10 @@ public class EjecutarEmpleado {
                 
                 System.out.println(" ");
                 System.out.println("Vendedor@ " + Ventas.getNombre());
-                System.out.println("Su sueldo quincenal es de: "+ Ventas.getSueldoQuincenal());                
-        }    
-        }         
+                System.out.println("Su sueldo quincenal es de: "+ Ventas.getSueldoQuincenal());                     
+        }     
+            System.out.println("Desea ingresar otra persona? S/N");
+            continuar=Leer.next();
+        } while (continuar.equalsIgnoreCase("si"));         
     }   
 }
